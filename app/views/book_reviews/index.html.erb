@@ -1,0 +1,29 @@
+<h1>Listing book_reviews</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Url</th>
+    <th>Review date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @book_reviews.each do |book_review| %>
+  <tr>
+    <td><%= book_review.id %></td>
+    <td><%= book_review.title %></td>
+    <td><%= book_review.url %></td>
+    <td><%= book_review.review_date %></td>
+    <td><%= link_to 'Show', book_review %></td>
+    <td><%= link_to 'Edit', edit_book_review_path(book_review) %></td>
+    <td><%= link_to 'Destroy', book_review, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book review', new_book_review_path %>

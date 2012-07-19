@@ -1,4 +1,6 @@
 Beertakuyajp::Application.routes.draw do
+  resources :book_reviews
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
